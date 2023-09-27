@@ -17,17 +17,17 @@ const db =  mysql.createConnection({
 
 // send response from the server.
 app.get('/', (req, res) => {
-    res.json("Hello From Backend");
+    // res.json("Hello From Backend");
     const sql = "SELECT * FROM freelancer";
     db.query(sql, (err, data_q) => {
         if (err) {
             return res.json("Error from DB connection!");
         }
-        res.json(data_q);    
+        return res.json(data_q);    
     });
-})
+});
 
-// app starts and listens for connection.
+// app to start and listen for connection.
 app.listen(8081, () => {
     console.log("listening");
 });
