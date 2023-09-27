@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Freelancer() {
 
@@ -15,8 +16,8 @@ function Freelancer() {
 
     return (
         <div className='d-flex vh-100 text-bg-info justify-content-center align-items-center'>
-            <div className='w-60 bg-white rounded p-2'>
-                <button className='btn btn-success p-2'>Register User</button>
+            <div className='container w-60 bg-white rounded p-2'>
+                <Link to='/register' className='btn btn-success p-2'>Register User (+)</Link>
                 <div className='table-responsive'>
                     <table className='table table-hover'>
                         <thead>
