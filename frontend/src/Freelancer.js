@@ -7,17 +7,17 @@ function Freelancer() {
     // manage state data.
     const [freelancer, setFreelancer] = useState([]);
 
-    // fetch data from backend.
+    // fetch data from backend - @GET.
     useEffect(() => {
         axios.get('http://localhost:8081/')
-            .then(res => setFreelancer(res.data))
-            .catch(err => console.log(err));
+            .then(response => setFreelancer(response.data)) // .then(response => console.log(response))
+            .catch(error => console.log(error));
     }, []);
 
     return (
         <div className='d-flex vh-100 text-bg-info justify-content-center align-items-center'>
             <div className='container w-60 bg-white rounded p-2'>
-                <Link to='/register' className='btn btn-success p-2'>Register User (+)</Link>
+                <Link to='/register' className='btn btn-success p-2'>REGISTER USER (+)</Link>
                 <div className='table-responsive'>
                     <table className='table table-hover'>
                         <thead>
@@ -40,8 +40,8 @@ function Freelancer() {
                                         <td>{res_data.skillsets}</td>
                                         <td>{res_data.hobby}</td>
                                         <td>
-                                            <button className='btn btn-primary btn-sm m-2'>Update</button>
-                                            <button className='btn btn-danger btn-sm m-2'>Delete</button>
+                                            <button className='btn btn-primary btn-sm m-2'>UPDATE</button>
+                                            <button className='btn btn-danger btn-sm m-2'>DELETE</button>
                                         </td>
                                     </tr>
                                 ))
