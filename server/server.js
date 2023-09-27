@@ -4,7 +4,7 @@ const mysql = require("mysql");
 
 const app = express();
 
-// configure cors.
+// configure cors to to relax the security applied to an API.
 app.use(cors());
 
 // create connection with mysql.
