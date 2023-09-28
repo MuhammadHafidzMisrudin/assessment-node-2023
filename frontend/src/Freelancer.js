@@ -10,15 +10,24 @@ function Freelancer() {
     // fetch data from backend - @GET.
     useEffect(() => {
         axios.get('http://localhost:8081/')
-            .then(response => setFreelancer(response.data)) // .then(response => console.log(response))
+            .then(response => {
+                console.log(response);
+                setFreelancer(response.data);
+            })
             .catch(error => console.log(error));
     }, []);
+
+    //  make scrollable table.
+    const styleOverflow = {
+        overflowY: 'scroll',
+        height:'350px'
+    };
 
     return (
         <div className='d-flex vh-100 text-bg-info justify-content-center align-items-center'>
             <div className='container w-60 bg-white rounded p-2'>
                 <Link to='/register' className='btn btn-success p-2'>REGISTER USER (+)</Link>
-                <div className='table-responsive'>
+                <div className='table-responsive' style={styleOverflow}>
                     <table className='table table-hover'>
                         <thead>
                             <tr>
