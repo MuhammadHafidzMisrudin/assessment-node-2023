@@ -17,10 +17,20 @@ function Freelancer() {
             .catch(error => console.log(error));
     }, []);
 
+    // event handler to delete data with id - @DELETE.
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete('http://localhost:8081/freelancer/' + id);
+            window.location.reload();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     // make scrollable table.
     const styleOverflow = {
         overflowY: 'scroll',
-        height:'350px'
+        height: '350px'
     };
 
     return (
@@ -54,7 +64,7 @@ function Freelancer() {
                                             <button className='btn btn-danger btn-sm m-2'>DELETE</button> */}
                                             {/* pass res_data as props via Link */}
                                             <Link to={`update/${res_data.id}`} state={res_data} className='btn btn-primary btn-sm mb-2 rounded-pill form-control'>UPDATE</Link>
-                                            <Link className='btn btn-danger btn-sm rounded-pill form-control'>DELETE</Link>
+                                            <button className='btn btn-danger btn-sm rounded-pill form-control' onClick={e => handleDelete(res_data.id)}>DELETE</button>
                                         </td>
                                     </tr>
                                 ))

@@ -75,11 +75,29 @@ app.put('/update/:id', (request, response) => {
     // get the id.
     const id = request.params.id;
   
-    db.query(sql, [...values, id], (error, data_insert) => {
+    db.query(sql, [...values, id], (error, data_update) => {
         if (error) {
             return response.json("Error from DB connection!");
         }
-        return response.json(data_insert);
+        return response.json(data_update);
+    });
+});
+
+
+/* 
+    @DELETE to delete current data with its id from database.
+*/
+app.delete('/freelancer/:id', (request, response) => {
+    const sql = "DELETE FROM freelancer WHERE id = ?";
+
+    // get the id.
+    const id = request.params.id;
+  
+    db.query(sql, [id], (error, data_delete) => {
+        if (error) {
+            return response.json("Error from DB connection!");
+        }
+        return response.json(data_delete);
     });
 });
 
