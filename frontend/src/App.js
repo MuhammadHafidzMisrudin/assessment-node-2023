@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Freelancer from './Freelancer';
 import RegisterFreelancer from './RegisterFreelancer'
 
-
 function App() {
   return (
     <div className="App">

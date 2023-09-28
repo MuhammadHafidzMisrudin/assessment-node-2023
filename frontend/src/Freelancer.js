@@ -17,7 +17,7 @@ function Freelancer() {
             .catch(error => console.log(error));
     }, []);
 
-    //  make scrollable table.
+    // make scrollable table.
     const styleOverflow = {
         overflowY: 'scroll',
         height:'350px'
@@ -27,10 +27,10 @@ function Freelancer() {
         <div className='d-flex vh-100 text-bg-info justify-content-center align-items-center'>
             <div className='container w-60 bg-white rounded p-2'>
                 <Link to='/register' className='btn btn-success p-2'>REGISTER USER (+)</Link>
-                <div className='table-responsive' style={styleOverflow}>
+                <div className='table-responsive pt-2 pb-2' style={styleOverflow}>
                     <table className='table table-hover'>
-                        <thead>
-                            <tr>
+                        <thead className='table-dark'>
+                            <tr className='justify-content-center align-middle text-center'>
                                 <th>Username</th>
                                 <th>Email</th>
                                 <th>Phone Number</th>
@@ -39,10 +39,10 @@ function Freelancer() {
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className='table-group-divider'>
                             {
                                 freelancer.map((res_data, index) => (
-                                    <tr key={index}>
+                                    <tr key={index} className='justify-content-center align-middle text-center'>
                                         <td>{res_data.username}</td>
                                         <td>{res_data.email}</td>
                                         <td>{res_data.phonenumber}</td>
