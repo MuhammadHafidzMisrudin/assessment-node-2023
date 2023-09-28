@@ -10,6 +10,7 @@ app.use(express.json());
 // configure cors to to relax the security applied to an API.
 app.use(cors());
 
+
 // create connection with mysql.
 const db =  mysql.createConnection({
     host: "localhost",
@@ -17,6 +18,7 @@ const db =  mysql.createConnection({
     password: "",
     database: "crud"
 });
+
 
 /* 
     send response from the server.
@@ -34,8 +36,9 @@ app.get('/', (request, response) => {
     });
 });
 
+
 /* 
-    @POST to add a new data into database.
+    @POST to add/register a new data into database.
 */
 app.post('/register', (request, response) => {
     const sql = "INSERT INTO freelancer (`username`, `email`, `phonenumber`, `skillsets`, `hobby`) VALUES (?)";
@@ -48,6 +51,31 @@ app.post('/register', (request, response) => {
     ];
   
     db.query(sql, [values], (error, data_insert) => {
+        if (error) {
+            return response.json("Error from DB connection!");
+        }
+        return response.json(data_insert);
+    });
+});
+
+
+/* 
+    @PUT to update current data with new data into database.
+*/
+app.put('/update/:id', (request, response) => {
+    const sql = "UPDATE freelancer SET `username` = ?, `email` = ?, `phonenumber` = ?, `skillsets` = ?, `hobby` = ? WHERE id = ?";
+    const values = [
+        request.body.username,
+        request.body.email,
+        request.body.phonenumber,
+        request.body.skillsets,
+        request.body.hobby
+    ];
+
+    // get the id.
+    const id = request.params.id;
+  
+    db.query(sql, [...values, id], (error, data_insert) => {
         if (error) {
             return response.json("Error from DB connection!");
         }
