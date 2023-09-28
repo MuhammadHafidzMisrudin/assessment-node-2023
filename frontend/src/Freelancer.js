@@ -53,8 +53,8 @@ function Freelancer() {
                                             {/* <button className='btn btn-primary btn-sm m-2'>UPDATE</button>
                                             <button className='btn btn-danger btn-sm m-2'>DELETE</button> */}
                                             {/* pass res_data as props via Link */}
-                                            <Link to={`update/${res_data.id}`} state={res_data} className='btn btn-primary btn-md m-2 rounded-pill'>UPDATE</Link>
-                                            <Link className='btn btn-danger btn-md m-2 rounded-pill'>DELETE</Link>
+                                            <Link to={`update/${res_data.id}`} state={res_data} className='btn btn-primary btn-sm mb-2 rounded-pill form-control'>UPDATE</Link>
+                                            <Link className='btn btn-danger btn-sm rounded-pill form-control'>DELETE</Link>
                                         </td>
                                     </tr>
                                 ))
