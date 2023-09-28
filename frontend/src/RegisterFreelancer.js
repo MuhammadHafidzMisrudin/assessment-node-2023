@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function RegisterFreelancer() {
+    
     // initialize state variables.
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -10,6 +11,7 @@ function RegisterFreelancer() {
     const [skillsets, setSkillsets] = useState('');
     const [hobby, setHobby] = useState('');
 
+    // initialise navigate object.
     const navigate = useNavigate();
 
     // event handler to submit data to the backend - @POST.

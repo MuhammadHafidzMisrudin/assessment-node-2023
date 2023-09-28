@@ -27,6 +27,7 @@ function Freelancer() {
         <div className='d-flex vh-100 text-bg-info justify-content-center align-items-center'>
             <div className='container w-60 bg-white rounded p-2'>
                 <Link to='/register' className='btn btn-success p-2'>REGISTER USER (+)</Link>
+                <div className='pt-2 pb-2'></div>
                 <div className='table-responsive pt-2 pb-2' style={styleOverflow}>
                     <table className='table table-hover'>
                         <thead className='table-dark'>
@@ -49,8 +50,10 @@ function Freelancer() {
                                         <td>{res_data.skillsets}</td>
                                         <td>{res_data.hobby}</td>
                                         <td>
-                                            <button className='btn btn-primary btn-sm m-2'>UPDATE</button>
-                                            <button className='btn btn-danger btn-sm m-2'>DELETE</button>
+                                            {/* <button className='btn btn-primary btn-sm m-2'>UPDATE</button>
+                                            <button className='btn btn-danger btn-sm m-2'>DELETE</button> */}
+                                            <Link to={`update/${res_data.id}`} className='btn btn-primary btn-md m-2 rounded-pill'>UPDATE</Link>
+                                            <Link className='btn btn-danger btn-md m-2 rounded-pill'>DELETE</Link>
                                         </td>
                                     </tr>
                                 ))
