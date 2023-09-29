@@ -99,7 +99,7 @@ useEffect(() => {
 ![](zimages/01-main.jpg)
 <br />
 
-1. RegisterFreelancer.js -> Register a new user freelancer with Form using Axios for registration.
+2. RegisterFreelancer.js -> Register a new user freelancer with Form using Axios for registration.
 ```javascript
 import axios from 'axios';
 import React, { useState } from 'react';
