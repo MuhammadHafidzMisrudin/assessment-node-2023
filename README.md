@@ -154,16 +154,16 @@ function handleSubmit(event) {
 <br />
 
 > [!NOTE]
-> - [x] Completed frontend and backend implementation as the solution for assessment.<br />
-> - [x] Managed to required tech stack such as NodeJS, React, Express, MySQL to implement solution and able to meet the requirements for assessment.<br />
-> - [x] Built necessary functionalities on the UI to perform all operations as stated in the requirements.<br />
-> - [x] Provided screenshots of images for displaying the outcome of development.
+- [x] Completed frontend and backend implementation as the solution for assessment.<br />
+- [x] Managed to required tech stack such as NodeJS, React, Express, MySQL to implement solution and able to meet the requirements for assessment.<br />
+- [x] Built necessary functionalities on the UI to perform all operations as stated in the requirements.<br />
+- [x] Provided screenshots of images for displaying the outcome of development.
 
 <br />
 
 > [!WARNING]
 > - Didn't have the time to implement it with .NET Framework and module, and .NET Restful API.<br />
 > - Didn't manage to host the working demo at cloud platform as there issues with the configuration and setting of local database. <br />
-> - [x] However, I also provided the screenshots of images of development. `#FF0000`
+- [x] However, I also provided the screenshots of images of development. `#FF0000`
 
 <br />
