@@ -33,9 +33,9 @@ Below is the following structure for main js script files.<br />
 2. Database was pre-populated with items for testing on server.
 3. Created table called freelancer.
 
-<br />**Screenshot: Structure**<br />
+<br />**Screenshot: Structure.**<br />
 ![](zimages/04-db-mysql-structure.jpg)
-<br />**Screenshot: List of items**<br />
+<br />**Screenshot: List of items.**<br />
 ![](zimages/05-db-query-items.jpg)<br />
 
 ### Descriptions of Backend Server Implementation
@@ -75,9 +75,10 @@ app.listen(8081, () => {
 <br />
 
 ### Descriptions of Front End Implementation
-1. Fetch data using React hooks.
+1. Freelancer.js -> Fetch data using React hooks and Axios.
 ```javascript
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 // manage state data.
 const [freelancer, setFreelancer] = useState([]);
@@ -94,5 +95,38 @@ useEffect(() => {
 ```
 <br />
 
-**Screenshot: Fetch and load data on a page**<br />
+**Screenshot: Fetch and load data on the main page.**<br />
 ![](zimages/01-main.jpg)
+<br />
+
+1. RegisterFreelancer.js -> Register a new user freelancer with Form using Axios for registration.
+```javascript
+import axios from 'axios';
+import React, { useState } from 'react';
+
+// initialize state variables.
+const [username, setUsername] = useState('');
+const [email, setEmail] = useState('');
+const [phonenumber, setPhonenumber] = useState('');
+const [skillsets, setSkillsets] = useState('');
+const [hobby, setHobby] = useState('');
+
+// initialise navigate object.
+const navigate = useNavigate();
+
+// event handler to submit data to the backend - @POST.
+// redirect to root.
+function handleSubmit(event) {
+    event.preventDefault();
+    axios.post('http://localhost:8081/register', { username, email, phonenumber, skillsets, hobby })
+        .then(response => {
+            console.log(response);
+            navigate('/');
+        }).catch(error => console.log(error));
+}
+```
+<br />
+
+**Screenshot: The register new user page.**<br />
+![](zimages/02-register-page.jpg)
+<br />
