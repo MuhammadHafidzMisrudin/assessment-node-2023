@@ -29,14 +29,13 @@ Below is the following structure for main js script files.<br />
     - **server.js**: to describe the implementations of RESTful API using HTTP methods (@GET,@POST @PUT, @DELETE and DB connection.<br />
 
 ### Descriptions of Database Creation
-
 1. Used phpMyAdmin to create and access MySQL database.
 2. Database was pre-populated with items for testing on server.
-3. Created table called freelancer.<br />
+3. Created table called freelancer.
 
-<br />**Screenshot - Structure**<br />
-![](zimages/04-db-mysql-structure.jpg)<br />
-<br />**Screenshot - List of items**<br />
+<br />**Screenshot: Structure**<br />
+![](zimages/04-db-mysql-structure.jpg)
+<br />**Screenshot: List of items**<br />
 ![](zimages/05-db-query-items.jpg)<br />
 
 ### Descriptions of Backend Server Implementation
@@ -75,4 +74,24 @@ app.listen(8081, () => {
 ```
 <br />
 
-### Descriptions of Database Creation
+### Descriptions of Front End Implementation
+1. Fetch data using React hooks.
+```javascript
+import React, { useEffect, useState } from 'react';
+
+// manage state data.
+const [freelancer, setFreelancer] = useState([]);
+
+// fetch data from backend - @GET.
+useEffect(() => {
+    axios.get('http://localhost:8081/')
+        .then(response => {
+            console.log(response);
+            setFreelancer(response.data);
+        })
+        .catch(error => console.log(error));
+}, []);
+```
+<br />
+**Screenshot: Fetch and load data on a page**<br />
+![](zimages/01-main.jpg)
