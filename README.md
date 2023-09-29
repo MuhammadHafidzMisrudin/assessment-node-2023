@@ -28,8 +28,9 @@ Below is the following structure for main js script files.<br />
     - **server.js**: to describe the implementations of RESTful API using HTTP methods (@GET,@POST @PUT, @DELETE and DB connection.<br />
 
 ### Descriptions of Database Creation
-Used phpMyAdmin to create and access MySQL database.<br />
-Database was pre-populated with items for testing on server.<br />
+1. Used phpMyAdmin to create and access MySQL database.
+2. Database was pre-populated with items for testing on server.
+3. Created table called freelancer.<br />
 <br />**Screenshot - Structure**<br />
 ![](zimages/04-db-mysql-structure.jpg)<br />
 <br />**Screenshot - List of items**<br />
@@ -69,3 +70,6 @@ app.listen(8081, () => {
     console.log("listening");
 });
 ```
+<br />
+
+### Descriptions of Database Creation
