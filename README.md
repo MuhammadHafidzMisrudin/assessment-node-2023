@@ -31,6 +31,7 @@ Below is the following structure for main js script files.<br />
 1. Used phpMyAdmin to create and access MySQL database.
 2. Database was pre-populated with items for testing on server.
 3. Created table called freelancer.<br />
+
 <br />**Screenshot - Structure**<br />
 ![](zimages/04-db-mysql-structure.jpg)<br />
 <br />**Screenshot - List of items**<br />
