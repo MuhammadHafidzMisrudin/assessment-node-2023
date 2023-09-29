@@ -27,6 +27,11 @@ Below is the following structure for main js script files.<br />
 2. **server**
     - **server.js**: to describe the implementations of RESTful API using HTTP methods (@GET,@POST @PUT, @DELETE and DB connection.<br />
 
+### Descriptions of Database Creation
+- Used phpMyAdmin to create and access MySQL database.<br />
+**Screenshots**<br />
+
+
 ### Descriptions of Backend Server Implementation
 Express framework was used to create and run a server for connection.<br />
 It also serves to create a DB connection with MySQL.<br />
