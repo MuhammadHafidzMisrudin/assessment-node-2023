@@ -164,6 +164,6 @@ function handleSubmit(event) {
 > [!WARNING]
 > 1. Didn't have the time to implement it with .NET Framework and module, and .NET Restful API.<br />
 > 2. Didn't manage to host the working demo at cloud platform as there issues with the configuration and setting of local database. <br />
-> 3. However, I also provided the screenshots of images of development. `#FF0000`
+> 3. **However, I also provided the screenshots of images of development**.
 
 <br />
