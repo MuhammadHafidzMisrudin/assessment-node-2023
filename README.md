@@ -148,3 +148,7 @@ function handleSubmit(event) {
 }
 ```
 <br />
+
+**Screenshot: the update user details page.**<br />
+![](zimages/03-update-details-page.jpg)
+<br />
