@@ -30,8 +30,9 @@ Below is the following structure for main js script files.<br />
 ### Descriptions of Database Creation
 Used phpMyAdmin to create and access MySQL database.<br />
 Database was pre-populated with items for testing on server.<br />
-**Screenshots**<br />
+<br />**Screenshot - Structure**<br />
 ![](zimages/04-db-mysql-structure.jpg)<br />
+<br />**Screenshot - List of items**<br />
 ![](zimages/05-db-query-items.jpg)<br />
 
 ### Descriptions of Backend Server Implementation
