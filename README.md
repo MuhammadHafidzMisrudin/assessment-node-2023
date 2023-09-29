@@ -75,7 +75,7 @@ app.listen(8081, () => {
 <br />
 
 ### Descriptions of Front End Implementation
-1. Freelancer.js -> implements a functional component to fetch data using React hooks and Axios.
+1. **Freelancer.js** -> implements a functional component to fetch data using React hooks and Axios.
 ```javascript
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -99,7 +99,7 @@ useEffect(() => {
 ![](zimages/01-main.jpg)
 <br />
 
-2. RegisterFreelancer.js -> implements a functional component to register a new user item with the Form using Axios to the backend.
+2. **RegisterFreelancer.js** -> implements a functional component to register a new user item with the Form using Axios to the backend.
 ```javascript
 import axios from 'axios';
 import React, { useState } from 'react';
@@ -131,7 +131,7 @@ function handleSubmit(event) {
 ![](zimages/02-register-page.jpg)
 <br />
 
-3. UpdateUserFreelancer.js -> implements a functional component to update a current user details with the Form.
+3. **UpdateUserFreelancer.js** -> implements a functional component to update a current user details with the Form.
 ```javascript
 import axios from 'axios';
 import React, { useState } from 'react';
