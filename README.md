@@ -93,5 +93,6 @@ useEffect(() => {
 }, []);
 ```
 <br />
+
 **Screenshot: Fetch and load data on a page**<br />
 ![](zimages/01-main.jpg)
