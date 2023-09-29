@@ -39,8 +39,8 @@ Below is the following structure for main js script files.<br />
 ![](zimages/05-db-query-items.jpg)<br />
 
 ### Descriptions of Backend Server Implementation
-Express framework was used to create and run a server for connection.<br />
-It also serves to create a DB connection with MySQL.<br />
+1. Express framework was used to create and run a server for connection.<br />
+2. It also serves to create a DB connection with MySQL.<br />
 ```javascript
 const express = require("express");
 const mysql = require("mysql");
@@ -127,7 +127,7 @@ function handleSubmit(event) {
 ```
 <br />
 
-**Screenshot: The register new user page.**<br />
+**Screenshot: the register new user page.**<br />
 ![](zimages/02-register-page.jpg)
 <br />
 
