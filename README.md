@@ -31,11 +31,11 @@ Below is the following structure for main js script files.<br />
 ### Descriptions of Database Creation
 1. Used phpMyAdmin to create and access MySQL database.
 2. Database was pre-populated with items for testing on server.
-3. Created table called freelancer.
+3. Created table called **_freelancer_**.
 
-<br />**Screenshot: Structure.**<br />
+<br />**Screenshot: structure.**<br />
 ![](zimages/04-db-mysql-structure.jpg)
-<br />**Screenshot: List of items.**<br />
+<br />**Screenshot: list of items.**<br />
 ![](zimages/05-db-query-items.jpg)<br />
 
 ### Descriptions of Backend Server Implementation
@@ -75,7 +75,7 @@ app.listen(8081, () => {
 <br />
 
 ### Descriptions of Front End Implementation
-1. Freelancer.js -> Fetch data using React hooks and Axios.
+1. Freelancer.js -> implements a functional component to fetch data using React hooks and Axios.
 ```javascript
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -95,11 +95,11 @@ useEffect(() => {
 ```
 <br />
 
-**Screenshot: Fetch and load data on the main page.**<br />
+**Screenshot: fetch and load data on the main page.**<br />
 ![](zimages/01-main.jpg)
 <br />
 
-2. RegisterFreelancer.js -> Register a new user freelancer with Form using Axios for registration.
+2. RegisterFreelancer.js -> implements a functional component to register a new user item with the Form using Axios to the backend.
 ```javascript
 import axios from 'axios';
 import React, { useState } from 'react';
@@ -129,4 +129,22 @@ function handleSubmit(event) {
 
 **Screenshot: The register new user page.**<br />
 ![](zimages/02-register-page.jpg)
+<br />
+
+3. UpdateUserFreelancer.js -> implements a functional component to update a current user details with the Form.
+```javascript
+import axios from 'axios';
+import React, { useState } from 'react';
+
+// event handler to update data to the backend for update - @PUT.
+// redirect to root.
+function handleSubmit(event) {
+    event.preventDefault();
+    axios.put('http://localhost:8081/update/' + id, { username, email, phonenumber, skillsets, hobby })
+        .then(response => {
+            console.log(response);
+            navigate('/');
+        }).catch(error => console.log(error));
+}
+```
 <br />
