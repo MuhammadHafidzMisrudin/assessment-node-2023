@@ -19,6 +19,7 @@ Below is the following structure for main js script files.<br />
 ├── server
 |   └── server.js   
 ```
+
 1. **frontend**
     - **App.js**: to render main react component with multiple page routes.<br />
     - **Freelancer.js**: a functional component for main page to render the list of users of freelancers.<br />
@@ -28,6 +29,7 @@ Below is the following structure for main js script files.<br />
     - **server.js**: to describe the implementations of RESTful API using HTTP methods (@GET,@POST @PUT, @DELETE and DB connection.<br />
 
 ### Descriptions of Database Creation
+
 1. Used phpMyAdmin to create and access MySQL database.
 2. Database was pre-populated with items for testing on server.
 3. Created table called freelancer.<br />
