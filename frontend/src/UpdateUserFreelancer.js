@@ -35,10 +35,10 @@ function UpdateUserFreelancer(props) {
     }
 
     return (
-        <div className='d-flex vh-100 text-bg-info justify-content-center align-items-center'>
+        <div className='container-fluid d-flex vh-100 text-bg-info justify-content-center align-items-center'>
             <div className='container w-60 bg-white rounded p-3'>
                 <form onSubmit={handleSubmit} className='needs-validation'>
-                    <h2>Update User Details</h2>
+                    <p className='h2 text-center font-weight-bold'>Update User Details</p>
                     <div className="mb-2">
                         <label htmlFor='inputUsername' className='form-label'>Username:</label>
                         <input id='inputUsername' type='text' placeholder='insert username...' className='form-control' value={username}

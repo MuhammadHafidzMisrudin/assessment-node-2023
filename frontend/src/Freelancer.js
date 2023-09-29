@@ -34,8 +34,9 @@ function Freelancer() {
     };
 
     return (
-        <div className='d-flex vh-100 text-bg-info justify-content-center align-items-center'>
+        <div className='container-fluid d-flex vh-100 text-bg-info justify-content-center align-items-center'>
             <div className='container w-60 bg-white rounded p-2'>
+                <p className='h2 justify-content-center align-items-center text-center font-weight-bold'>List of Users (Freelancers)</p>
                 <Link to='/register' className='btn btn-success p-2'>REGISTER USER (+)</Link>
                 <div className='pt-2 pb-2'></div>
                 <div className='table-responsive pt-2 pb-2' style={styleOverflow}>
