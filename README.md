@@ -1,6 +1,5 @@
 # Example Dev Solution for Assessment
 ### Technology Stack
-<br />
-- Database: MySQL
-- Back End: NodeJS, Express
+- Database: MySQL<br />
+- Back End: NodeJS, Express<br />
 - Front End: ReactJS (JavaScript)
