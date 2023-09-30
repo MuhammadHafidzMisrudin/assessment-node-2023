@@ -153,7 +153,7 @@ function handleSubmit(event) {
 ![](zimages/03-update-details-page.jpg)
 <br />
 
-3. **Freelancer.js** -> implements a functional component to perform deletion on an existing user.
+4. **Freelancer.js** -> implements a functional component to perform deletion on an existing user.
 ```javascript
 
 // event handler to delete data with id - @DELETE.
