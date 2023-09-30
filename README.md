@@ -153,6 +153,25 @@ function handleSubmit(event) {
 ![](zimages/03-update-details-page.jpg)
 <br />
 
+3. **Freelancer.js** -> implements a functional component to perform deletion on an existing user.
+```javascript
+
+// event handler to delete data with id - @DELETE.
+const handleDelete = async (id) => {
+    try {
+        await axios.delete('http://localhost:8081/freelancer/' + id);
+        window.location.reload();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+<button className='btn btn-danger btn-sm rounded-pill form-control' 
+    onClick={e => handleDelete(res_data.id)}>DELETE</button>
+```
+<br />
+
+
 > [!NOTE]
 > 1. Completed frontend and backend implementation as the solution for assessment.<br />
 > 2. Managed to required tech stack such as NodeJS, React, Express, MySQL to implement solution and able to meet the requirements for assessment.<br />
