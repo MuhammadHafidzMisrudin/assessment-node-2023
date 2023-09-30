@@ -33,10 +33,15 @@ Below is the following structure for main js script files.<br />
 2. Database was pre-populated with items for testing on server.
 3. Created table called **_freelancer_**.
 
-<br />**Screenshot: structure.**<br />
+<br />
+
+**Screenshot: structure.**<br />
 ![](zimages/04-db-mysql-structure.jpg)
-<br />**Screenshot: list of items.**<br />
-![](zimages/05-db-query-items.jpg)<br />
+<br />
+
+**Screenshot: list of items.**<br />
+![](zimages/05-db-query-items.jpg)
+<br />
 
 ### Descriptions of Backend Server Implementation
 1. Express framework was used to create and run a server for connection.<br />
@@ -171,6 +176,17 @@ const handleDelete = async (id) => {
 ```
 <br />
 
+**Screenshot: the existing user in the list.**<br />
+![](zimages/06-existing-user-list.jpg)
+<br />
+
+**Screenshot: delete current user by clicking the delete button.**<br />
+![](zimages/07-delete-user.jpg)
+<br />
+
+**Screenshot: user being deleted and being removed from the list.**<br />
+![](zimages/08-user-deleted.jpg)
+<br />
 
 > [!NOTE]
 > 1. Completed frontend and backend implementation as the solution for assessment.<br />
